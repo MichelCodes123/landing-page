@@ -1,16 +1,17 @@
 import styled from 'styled-components'
 
+
 let register = {
     border: "solid",
-    borderRadius: "1rem",
-    padding: "1rem"
+
 }
 
 let Nav = styled.nav`
 height: 10vh;
-    padding: 1rem 3%;
+    padding: 1rem 1rem;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 50%;
     ul{
         list-style: none;
         display: inline-block;
@@ -23,11 +24,14 @@ height: 10vh;
         align-items: center;
     }
 
+    @media (max-width: 756px) {
+            gap: 8%;
+    }
+
 `
 let A = styled.a`
     
     display: inline-block;
-    padding: 0 1rem;
     font-family: var(--main-font);
     font-weight: 500;
 
@@ -36,26 +40,40 @@ let A = styled.a`
 
  
 `
+let LinkDiv = styled.div`
+    display: flex;
+    gap: 3rem;
+`
 let HomeLink = styled(A)`
-    padding-right: 2rem;
-    padding-left: 0;
+
     font-weight: 700;
     font-size: 2.5rem;
     color: hsl(0, 0%, 8%);
 
 `
+let LinkHolder = styled.ul`
+    display: flex !important;
+    gap: 1rem;
+
+
+    @media (max-width: 756px) {
+           display: inline-block !important;
+           overflow-y: hidden;
+           height: 1rem;
+    }
+
+
+`
 function Links() {
 
-    return (
 
-        <ul>
+    return (
+        <LinkHolder>
             <li> <A href="#"> Features</A> </li>
             <li> <A href="#"> Company </A> </li>
             <li> <A href="#"> Careers</A> </li>
             <li> <A href="#"> About</A> </li>
-
-
-        </ul>
+        </LinkHolder>
     )
 }
 function NavBar() {
@@ -63,12 +81,14 @@ function NavBar() {
         <Nav>
             <div>
                 <HomeLink href="#"> snap</HomeLink>
-                <Links />
+
             </div>
-            <div>
+
+            <LinkDiv>
+                <Links />
                 <A href="#"> Login</A>
                 <A style={register} href="#"> Register</A>
-            </div>
+            </LinkDiv>
 
         </Nav>
 

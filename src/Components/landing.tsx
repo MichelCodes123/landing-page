@@ -72,13 +72,13 @@ const Main = styled.main`
     justify-content: space-evenly;
     height: 90vh;
     width: 100vw;
-    padding: 0 5rem;
+    padding: 5rem 5rem;
 
 
     @media (max-width: 756px) {
         flex-direction: column-reverse;
         text-align: center;
-        padding: 0 1rem;
+        padding: 2rem 2rem;
     }
 
 
