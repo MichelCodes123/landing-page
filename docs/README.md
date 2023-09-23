@@ -1,18 +1,7 @@
 This is a quick landing page UI built with React and Typescript
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+Desktop View: 
+![Alt text](image.png)
 
 
 
